@@ -5349,7 +5349,7 @@ __webpack_require__.r(__webpack_exports__);
     getTodo: function getTodo() {
       var _this2 = this;
 
-      console.log("kill");
+      console.log("get Data");
       this.axios.get(this.api).then(function (response) {
         _this2.todos = response.data;
       });
@@ -5357,13 +5357,13 @@ __webpack_require__.r(__webpack_exports__);
     deleteTodo: function deleteTodo(id) {
       var _this3 = this;
 
-      console.log("kill");
+      console.log("kill Data");
       this.axios["delete"](this.api + '/' + id).then(function (response) {
         _this3.getTodo();
       });
     },
     editTodo: function editTodo(index) {
-      console.log("edit");
+      console.log("edit Data");
 
       if (this.todos[index].id) {
         this.name = this.todos[index].name;
@@ -5374,7 +5374,7 @@ __webpack_require__.r(__webpack_exports__);
     updateTodo: function updateTodo(index) {
       var _this4 = this;
 
-      console.log("update");
+      console.log("update Data");
 
       if (this.name.length > 0) {
         console.log("Get Update", this.todos[index].name);
@@ -5388,7 +5388,7 @@ __webpack_require__.r(__webpack_exports__);
           _this4.name = "";
         });
       } else {
-        console.log("EMoty");
+        console.log("Empty");
       }
     },
     resetTodo: function resetTodo() {

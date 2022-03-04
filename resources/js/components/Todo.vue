@@ -79,19 +79,19 @@
                 });
            },
            getTodo(){
-               console.log("kill");
+               console.log("get Data");
                 this.axios.get(this.api).then((response) => {
                     this.todos = response.data;
                 });
            },
            deleteTodo(id){
-               console.log("kill");
+               console.log("kill Data");
                 this.axios.delete(this.api+'/'+id).then((response) => {
                     this.getTodo();
                 });
            },
            editTodo(index){
-               console.log("edit");
+               console.log("edit Data");
                if(this.todos[index].id){
                    this.name = this.todos[index].name;
                    this.update = true;
@@ -99,7 +99,7 @@
                }
            },
             updateTodo(index){
-               console.log("update");
+               console.log("update Data");
                if(this.name.length > 0){
                   console.log("Get Update",this.todos[index].name)
                   this.axios.patch(this.api+"/"+this.todos[index].id,{'name':this.name}).then((response) => {
@@ -109,7 +109,7 @@
                 });
                }
                else{
-                   console.log("EMoty");
+                   console.log("Empty");
                }
            },
            resetTodo(){

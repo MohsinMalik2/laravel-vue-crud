@@ -15,12 +15,13 @@
                 font-family: 'Nunito', sans-serif;
             }
         </style>
+        
     </head>
     <body class="antialiased">
        
         <div id="app">
             <Todo/>
-       </div>
+        </div>
 
        <script src="{{ asset('js/app.js') }}" ></script>
 
