@@ -59,7 +59,6 @@
     export default {
        data(){
            return{
-
                 todos: [],
                 api: 'http://127.0.0.1:8000/api/todo',
                 name: "",
@@ -120,4 +119,3 @@
        }
     }
 </script>
-)
